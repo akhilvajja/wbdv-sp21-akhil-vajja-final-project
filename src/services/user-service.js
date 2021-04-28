@@ -1,4 +1,4 @@
-const USER_API = "http://localhost:4000/api/users";
+const USER_API = process.env.SERVER_URL;
 
 const profile = () => {
     return fetch(`${USER_API}/profile`, {

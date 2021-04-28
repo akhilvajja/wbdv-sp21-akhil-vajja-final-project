@@ -30,6 +30,9 @@ export default () =>
             <Link to="/services/paint" className="list-group-item">
                 Paint help
             </Link>
+            <Link to="/maps" className="list-group-item">
+                Maps
+            </Link>
             <Link to="/editor" className="list-group-item">
                 Request Editor
             </Link>
