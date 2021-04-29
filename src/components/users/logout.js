@@ -3,7 +3,7 @@ import {useHistory, useParams} from 'react-router-dom'
 
 const Logout = () => {
     const logout = () => {
-        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/logout`, {
+        fetch(`http://wbdv-akhil-vajja-final-server.herokuapp.com/api/logout`, {
             method: 'GET',
             credentials: "include",
             headers: {

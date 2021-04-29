@@ -1,4 +1,4 @@
-const USER_API = "https://wbdv-akhil-vajja-final-server.herokuapp.com";
+const USER_API = "http://wbdv-akhil-vajja-final-server.herokuapp.com";
 
 const profile = () => {
     return fetch(`${USER_API}/profile`, {

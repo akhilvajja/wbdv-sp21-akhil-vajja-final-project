@@ -18,7 +18,7 @@ const Profile = () => {
         //         .then(response => response.json())
         //         .then(currentUser => setUser(currentUser))
         // } else {
-        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/profile`, {
+        fetch(`http://wbdv-akhil-vajja-final-server.herokuapp.com/api/profile`, {
             method: 'GET',
             credentials: "include",
             headers: {
@@ -33,7 +33,7 @@ const Profile = () => {
                 setUser(currentUser)
 
                 if (userId) {
-                    fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/profile/${userId}`)
+                    fetch(`http://wbdv-akhil-vajja-final-server.herokuapp.com/api/profile/${userId}`)
                         .then(response => response.json())
                         .then(otherUser => {
                             setOtherUser(otherUser)
@@ -45,7 +45,7 @@ const Profile = () => {
     }, [userId])
 
     const logout = () => {
-        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/logout`, {
+        fetch(`http://wbdv-akhil-vajja-final-server.herokuapp.com/api/logout`, {
             method: 'GET',
             credentials: "include",
             headers: {

@@ -8,7 +8,7 @@ const Register = () => {
     const history = useHistory()
     const register = () => {
         // TODO: move this to a service file
-        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/register`, {
+        fetch(`http://wbdv-akhil-vajja-final-server.herokuapp.com/api/register`, {
             method: "POST",
             credentials: "include",
             body: JSON.stringify(user),

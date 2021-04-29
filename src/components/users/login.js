@@ -7,7 +7,7 @@ const Login = () => {
     const history = useHistory()
     const [credentials, setCredentials] = useState({})
     const login = () => {
-        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/login`, {
+        fetch(`http://wbdv-akhil-vajja-final-server.herokuapp.com/api/login`, {
             method: 'POST',
             credentials: "include",
             headers: {
