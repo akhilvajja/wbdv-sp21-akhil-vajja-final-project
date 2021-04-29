@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import ContentPublic from "./content-public";
 import AdminContent from "./admin-content";
-import {useParams} from "react-router-dom"
+import {useHistory, useParams} from "react-router-dom"
 import PrivateContent from "./private-content";
 import Logout from "./logout";
 
@@ -18,7 +18,7 @@ const Profile = () => {
         //         .then(response => response.json())
         //         .then(currentUser => setUser(currentUser))
         // } else {
-        fetch(`http://localhost:8080/api/profile`, {
+        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/profile`, {
             method: 'GET',
             credentials: "include",
             headers: {
@@ -33,7 +33,7 @@ const Profile = () => {
                 setUser(currentUser)
 
                 if (userId) {
-                    fetch(`http://localhost:8080/api/profile/${userId}`)
+                    fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/profile/${userId}`)
                         .then(response => response.json())
                         .then(otherUser => {
                             setOtherUser(otherUser)
@@ -43,6 +43,21 @@ const Profile = () => {
             })
         // }
     }, [userId])
+
+    const logout = () => {
+        fetch(`https://wbdv-akhil-vajja-final-server.herokuapp.com/api/logout`, {
+            method: 'GET',
+            credentials: "include",
+            headers: {
+                'Access-Control-Allow-Origin': '*'
+            }
+        })
+            .then(response => response.json())
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     return(
         <div>
             <h1>Profile</h1>
@@ -60,7 +75,7 @@ const Profile = () => {
                 user && !otherUser &&
                 <PrivateContent/>
             }
-            <button onClick={Logout}>
+            <button onClick={logout}>
                 Logout
             </button>
         </div>

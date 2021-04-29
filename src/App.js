@@ -6,6 +6,7 @@ import Login from "./components/users/login";
 import Register from "./components/users/register";
 import Profile from "./components/users/profile";
 import MapComponent from "./components/g-maps";
+import Logout from "./components/users/logout";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/register" exact={true} component={Register}/>
             <Route path="/login" exact={true} component={Login}/>
             <Route path="/profile" exact={true} component={Profile}/>
+            <Route path="/logout" exact={true} component={Logout}/>
             <Route path="/maps" exact={true} component={MapComponent}/>
         </div>
       </BrowserRouter>
