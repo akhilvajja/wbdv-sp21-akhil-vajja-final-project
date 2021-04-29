@@ -25,7 +25,7 @@ function App() {
             <Route path="/register" exact={true} component={Register}/>
             <Route path="/login" exact={true} component={Login}/>
             <Route path="/profile" exact={true} component={Profile}/>
-            <Route path="/maps" exact={true} componenet={MapComponent}/>
+            <Route path="/maps" exact={true} component={MapComponent}/>
         </div>
       </BrowserRouter>
   );

@@ -32,7 +32,12 @@ const register = (credentials) => {
         .then(response => response.json())
 }
 
-const logout = () => {}
+const logout = () => {
+    return fetch(`${USER_API}/logout`, {
+        method: "POST",
+        credentials: "include"
+    }).then(response => response.json())
+}
 
 export default {
     register, login, logout, profile

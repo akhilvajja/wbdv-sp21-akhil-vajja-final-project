@@ -8,7 +8,7 @@ const Register = () => {
     const history = useHistory()
     const register = () => {
         // TODO: move this to a service file
-        fetch(`${SERV_URL}/register`, {
+        fetch(`http://localhost:8080/api/register`, {
             method: "POST",
             credentials: "include",
             body: JSON.stringify(user),

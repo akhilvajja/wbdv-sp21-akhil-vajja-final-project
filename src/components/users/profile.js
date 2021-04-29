@@ -3,6 +3,7 @@ import ContentPublic from "./content-public";
 import AdminContent from "./admin-content";
 import {useParams} from "react-router-dom"
 import PrivateContent from "./private-content";
+import Logout from "./logout";
 
 const SERV_URL = process.env.SERVER_URL;
 
@@ -17,7 +18,7 @@ const Profile = () => {
         //         .then(response => response.json())
         //         .then(currentUser => setUser(currentUser))
         // } else {
-        fetch("http://localhost:8080/api/profile", {
+        fetch(`http://localhost:8080/api/profile`, {
             method: 'GET',
             credentials: "include",
             headers: {
@@ -59,6 +60,9 @@ const Profile = () => {
                 user && !otherUser &&
                 <PrivateContent/>
             }
+            <button onClick={Logout}>
+                Logout
+            </button>
         </div>
     )
 }
